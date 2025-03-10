@@ -1,0 +1,27 @@
+<header [ngClass]="{'scrolled': isScrolled}" class="header">
+  <div class="container">
+    <div class="header-content">
+      <a routerLink="/" class="logo">Sure<span class="highlight">Dev</span></a>
+      
+      <nav [ngClass]="{'active': isMenuOpen}" class="nav-menu">
+        <ul>
+          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
+          <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+          <li><a routerLink="/experience" routerLinkActive="active" (click)="closeMenu()">Experience</a></li>
+          <li><a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">Skills</a></li>
+          <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
+          <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <button class="theme-toggle" (click)="toggleTheme()">
+          <fa-icon [icon]="(isDarkMode$ | async) ? faSun : faMoon"></fa-icon>
+        </button>
+        <button class="menu-toggle" (click)="toggleMenu()">
+          <fa-icon [icon]="isMenuOpen ? faXmark : faBars"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</header> 

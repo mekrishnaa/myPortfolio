@@ -1,0 +1,147 @@
+.about-section {
+  .about-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    display: flex;
+    justify-content: center;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      opacity: 0.1;
+      z-index: -1;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: var(--secondary-color);
+      opacity: 0.1;
+      z-index: -1;
+    }
+    
+    img {
+      border-radius: 10px;
+      transition: transform 0.5s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  
+  .about-content {
+    .about-subtitle {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+    }
+    
+    .about-description {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+      opacity: 0.9;
+    }
+    
+    .personal-info {
+      margin-top: 2rem;
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        
+        li {
+          margin-bottom: 0.8rem;
+          font-size: 1rem;
+          
+          span {
+            font-weight: 600;
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+  
+  .services-row {
+    margin-top: 5rem;
+    
+    .services-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      width: 100%;
+    }
+    
+    .service-card {
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      padding: 2rem;
+      height: 100%;
+      box-shadow: 0 5px 15px var(--shadow-color);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid var(--border-color);
+      
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px var(--shadow-color);
+      }
+      
+      .service-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+      
+      .service-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      
+      .service-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: var(--text-color);
+        opacity: 0.8;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about-section {
+    .about-image {
+      margin-bottom: 2rem;
+    }
+    
+    .about-content {
+      text-align: center;
+      
+      .personal-info ul {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+} 

@@ -1,0 +1,129 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--bg-color);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  
+  &.scrolled {
+    box-shadow: 0 5px 15px var(--shadow-color);
+    background-color: var(--card-bg);
+  }
+  
+  .container {
+    padding-top: 0;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+    
+    .highlight {
+      color: var(--primary-color);
+    }
+  }
+  
+  .nav-menu {
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      
+      li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+        
+        &:hover, &.active {
+          color: var(--primary-color);
+        }
+        
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: var(--primary-color);
+          transition: width 0.3s ease;
+        }
+        
+        &:hover::after, &.active::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+      color: var(--text-color);
+      
+      &:hover {
+        background-color: var(--border-color);
+      }
+    }
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    .nav-menu {
+      position: fixed;
+      top: var(--header-height);
+      right: -100%;
+      width: 250px;
+      height: calc(100vh - var(--header-height));
+      background-color: var(--card-bg);
+      transition: right 0.3s ease;
+      box-shadow: -5px 0 15px var(--shadow-color);
+      
+      &.active {
+        right: 0;
+      }
+      
+      ul {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+      }
+    }
+    
+    .menu-toggle {
+      display: flex;
+    }
+  }
+} 

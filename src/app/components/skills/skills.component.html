@@ -1,0 +1,39 @@
+<section class="section skills-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+    
+    <div class="row">
+      <div *ngFor="let category of skillCategories; let i = index" class="col-lg-4 mb-5" data-aos="fade-up" [attr.data-aos-delay]="i * 100">
+        <div class="skills-category">
+          <h3 class="category-title">{{category.title}}</h3>
+          
+          <div class="skills-list">
+            <div *ngFor="let skill of category.skills" class="skill-item">
+              <div class="skill-info">
+                <h4 class="skill-name">{{skill.name}}</h4>
+                <span class="skill-percentage">{{skill.percentage}}%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" [style.width.%]="skill.percentage" [style.background-color]="skill.color"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="skills-summary" data-aos="fade-up">
+          <h3 class="summary-title">Professional Summary</h3>
+          <p class="summary-text">
+            With 3.5+ years of professional experience, I've developed a strong foundation in frontend development with Angular, React, and Vue.js. I'm passionate about creating clean, efficient, and maintainable code while delivering exceptional user experiences.
+          </p>
+          <p class="summary-text">
+            I'm constantly learning and adapting to new technologies and methodologies to stay at the forefront of web development. My experience with both frontend and backend technologies allows me to understand the full development lifecycle and collaborate effectively with cross-functional teams.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

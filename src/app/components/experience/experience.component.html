@@ -1,0 +1,67 @@
+<section class="section experience-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">My Experience</h2>
+    
+    <div class="timeline">
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="timeline-title" data-aos="fade-right">Work Experience</h3>
+          
+          <div class="timeline-wrapper">
+            <div *ngFor="let exp of experiences; let i = index" class="timeline-item" data-aos="fade-right" [attr.data-aos-delay]="i * 100">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h4 class="timeline-title">{{exp.title}}</h4>
+                  <p class="timeline-company">{{exp.company}}</p>
+                </div>
+                <div class="timeline-info">
+                  <span class="timeline-period">{{exp.period}}</span>
+                  <span class="timeline-location">{{exp.location}}</span>
+                </div>
+                <div class="timeline-body">
+                  <ul>
+                    <li *ngFor="let item of exp.description">{{item}}</li>
+                  </ul>
+                </div>
+                <div class="timeline-tech">
+                  <span *ngFor="let tech of exp.technologies">{{tech}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <h3 class="timeline-title" data-aos="fade-left">Education</h3>
+          
+          <div class="timeline-wrapper">
+            <div *ngFor="let edu of education; let i = index" class="timeline-item" data-aos="fade-left" [attr.data-aos-delay]="i * 100">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h4 class="timeline-title">{{edu.degree}}</h4>
+                  <p class="timeline-company">{{edu.institution}}</p>
+                </div>
+                <div class="timeline-info">
+                  <span class="timeline-period">{{edu.period}}</span>
+                  <span class="timeline-location">{{edu.location}}</span>
+                </div>
+                <div class="timeline-body">
+                  <p>{{edu.description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="resume-download text-center mt-5" data-aos="fade-up">
+      <a href="assets/files/cv.pdf" download class="btn btn-primary btn-lg">
+        <i class="fas fa-download me-2"></i>
+        Download Resume
+      </a>
+    </div>
+  </div>
+</section> 

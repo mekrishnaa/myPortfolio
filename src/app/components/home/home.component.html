@@ -1,0 +1,152 @@
+<section class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 hero-content" data-aos="fade-right">
+        <h1 class="hero-greeting">Hello, I'm <span class="highlight">Krishna Kumar</span></h1>
+        
+        <div class="hero-title">
+          <ngx-typed-js [strings]="['Frontend Developer', 'Angular Specialist', 'UI/UX Enthusiast', 'Problem Solver']" [typeSpeed]="100" [backSpeed]="50" [loop]="true" [backDelay]="1000">
+            <span class="typing"></span>
+          </ngx-typed-js>
+        </div>
+        
+        <p class="hero-description">
+          I'm a passionate frontend developer with 3.5 years of experience, specializing in Angular and exploring backend technologies with Java. I create responsive, user-friendly web applications with clean code and modern design principles.
+        </p>
+        
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg me-3" (click)="navigateTo('/contact')">
+            Get In Touch
+          </button>
+          <a href="assets/files/cv.pdf" download class="btn btn-outline-primary btn-lg">
+            <fa-icon [icon]="faDownload" class="me-2"></fa-icon>
+            Download CV
+          </a>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 hero-image" data-aos="fade-left">
+        <div class="image-container">
+          <img src="assets/images/profile.jpg" alt="Alex Johnson" class="img-fluid profile-image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section stats-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-card">
+          <h3 class="stat-number">3.5+</h3>
+          <p class="stat-title">Years Experience</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3 col-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-card">
+          <h3 class="stat-number">15+</h3>
+          <p class="stat-title">Projects Completed</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="stat-card">
+          <h3 class="stat-number">10+</h3>
+          <p class="stat-title">Happy Clients</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="stat-card">
+          <h3 class="stat-number">5+</h3>
+          <p class="stat-title">Technologies</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section featured-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+    
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/project1.jpg" alt="E-commerce Dashboard" class="img-fluid">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">E-commerce Dashboard</h3>
+            <p class="project-description">
+              A comprehensive admin dashboard for e-commerce platforms with real-time analytics and inventory management.
+            </p>
+            <div class="project-tech">
+              <span>Angular</span>
+              <span>TypeScript</span>
+              <span>Chart.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-primary">View Project</a>
+              <a href="#" class="btn btn-sm btn-outline-primary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/project2.jpg" alt="Task Management App" class="img-fluid">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Task Management App</h3>
+            <p class="project-description">
+              A collaborative task management application with drag-and-drop functionality and team collaboration features.
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Redux</span>
+              <span>Firebase</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-primary">View Project</a>
+              <a href="#" class="btn btn-sm btn-outline-primary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="assets/images/project3.jpg" alt="Fitness Tracker" class="img-fluid">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Fitness Tracker</h3>
+            <p class="project-description">
+              A fitness tracking application with workout plans, progress charts, and nutrition tracking features.
+            </p>
+            <div class="project-tech">
+              <span>Angular</span>
+              <span>NgRx</span>
+              <span>Node.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-primary">View Project</a>
+              <a href="#" class="btn btn-sm btn-outline-primary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-4" data-aos="fade-up">
+      <button class="btn btn-outline-primary btn-lg" (click)="navigateTo('/projects')">
+        View All Projects
+      </button>
+    </div>
+  </div>
+</section> 
