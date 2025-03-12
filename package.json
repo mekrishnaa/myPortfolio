@@ -67,5 +67,8 @@
     "rimraf": "^5.0.5",
     "typescript": "~5.4.2",
     "webpack-bundle-analyzer": "^4.9.1"
+  },
+  "overrides": {
+    "esbuild": "^0.25.1"
   }
 }
