@@ -16,10 +16,10 @@
       
       <div class="header-actions">
         <button class="theme-toggle" (click)="toggleTheme()">
-          <fa-icon [icon]="(isDarkMode$ | async) ? faSun : faMoon"></fa-icon>
+          <i [class]="(isDarkMode$ | async) ? 'bi bi-sun' : 'bi bi-moon'"></i>
         </button>
         <button class="menu-toggle" (click)="toggleMenu()">
-          <fa-icon [icon]="isMenuOpen ? faXmark : faBars"></fa-icon>
+          <i [class]="isMenuOpen ? 'bi bi-x-lg' : 'bi bi-list'"></i>
         </button>
       </div>
     </div>

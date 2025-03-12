@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { faMapMarkerAlt, faEnvelope, faPhone, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contact',
@@ -8,11 +7,6 @@ import { faMapMarkerAlt, faEnvelope, faPhone, faPaperPlane } from '@fortawesome/
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  faMapMarkerAlt = faMapMarkerAlt;
-  faEnvelope = faEnvelope;
-  faPhone = faPhone;
-  faPaperPlane = faPaperPlane;
-  
   contactForm: FormGroup;
   formSubmitted = false;
   

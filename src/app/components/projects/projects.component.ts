@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faGithub, faChrome } from '@fortawesome/free-brands-svg-icons';
 
 interface Project {
   id: number;
@@ -18,9 +17,6 @@ interface Project {
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
-  faGithub = faGithub;
-  faChrome = faChrome;
-  
   projects: Project[] = [
     {
       id: 1,

@@ -1,6 +1,5 @@
 import { Component, HostListener } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
-import { faSun, faMoon, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +7,6 @@ import { faSun, faMoon, faBars, faXmark } from '@fortawesome/free-solid-svg-icon
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  faSun = faSun;
-  faMoon = faMoon;
-  faBars = faBars;
-  faXmark = faXmark;
   isScrolled = false;
   isMenuOpen = false;
   isDarkMode$ = this.themeService.isDarkMode$;
