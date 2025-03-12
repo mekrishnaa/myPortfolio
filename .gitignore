@@ -56,3 +56,4 @@ baseline.json
 
 # Ignore cache created with the Angular CLI.
 .angular/
+.angular/cache/18.2.14/angular-webpack/8a666498278b53bdf6200cc52fda8509dc2d336a/0.pack
