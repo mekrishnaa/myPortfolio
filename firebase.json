@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target":"suredev",
     "public": "dist/portfolio-website",
     "ignore": [
       "firebase.json",

@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "suredev"
+  },
+  "targets": {
+    "my-angular-project-5897": {
+      "hosting": {
+        "suredev": [
+          "suredev"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
